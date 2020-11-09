@@ -4,10 +4,12 @@
   >
     <div class="flex  w-full justify-between">
       <div class="flex items-center flex-shrink-0 text-black mr-6">
-        <span
-          class="font-semibold text-3xl tracking-tight text-purple-700 cursor-pointer"
-          >E<span class="text-black">.</span>Hamza</span
-        >
+        <router-link :to="{ name: 'Home' }">
+          <span
+            class="font-semibold text-3xl focus:cursor-pointer tracking-tight text-purple-700 cursor-pointer"
+            >E<span class="text-black">.</span>Hamza</span
+          >
+        </router-link>
       </div>
 
       <div
@@ -24,24 +26,32 @@
         class="flex space-x-6 font-bold   transform duration-500 z-30  justify-end w-1/2 float-right "
         :class="!showNavbar ? 'scale-0' : 'scale-100'"
       >
-        <li
-          :to="{ path: '/test' }"
-          class=" flex space-x-1 hover:mouse cursor-pointer border-b-2 border-purple-700"
+        <router-link
+          active-class="border-b-2 border-purple-700"
+          :to="{ path: '/home' }"
+          class=" flex space-x-1 hover:mouse cursor-pointer "
         >
           Home
-        </li>
-        <li
-          :to="{ path: '/test' }"
+        </router-link>
+        <router-link
+          active-class="border-b-2 border-purple-700"
+          :to="{ path: '/About' }"
           class=" flex space-x-1 hover:mouse cursor-pointer"
         >
           About
-        </li>
-        <li class=" flex space-x-1 items-baseline cursor-pointer">
+        </router-link>
+        <router-link
+          :to="{ path: '/Portfolio' }"
+          class=" flex space-x-1 items-baseline cursor-pointer"
+        >
           Portfolio
-        </li>
-        <li class=" flex space-x-1 items-baseline cursor-pointer">
+        </router-link>
+        <router-link
+          :to="{ path: '/Contact' }"
+          class=" flex space-x-1 items-baseline cursor-pointer"
+        >
           Contact
-        </li>
+        </router-link>
       </ul>
     </div>
   </nav>

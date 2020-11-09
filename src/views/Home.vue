@@ -25,8 +25,9 @@
           <p
             class="flex justify-center mt-10 mx-auto text-xl lg:my-12 font-bold space-x-1   "
           >
-            I always work with <Brain class="mx-1 text-green-500" size="26" /> &
-            <Heart class="text-red-500" size="26" />
+            I always work with
+            <Brain class="mx-1 text-green-500" :size="26" /> &
+            <Heart class="text-red-500" :size="26" />
           </p>
         </ul>
         <div class="w-100 text-center hidden md:block lg:block mt-16">
@@ -62,6 +63,9 @@
           <span class="text-purple-700">3</span> years of experience in
           creating, enhancing <span class="text-purple-700">&</span> fixing web
           projects
+          <router-link :to="{ name: 'About' }"
+            ><span class=" font-light text-blue-600">...more</span></router-link
+          >
         </p>
       </div>
     </div>
